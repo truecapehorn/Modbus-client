@@ -1,0 +1,26 @@
+{
+  "client":
+  {
+    "tcp": {
+      "host": "192.168.0.240",
+      "port": 502},
+    "rtu": {
+      "method" : "rtu",
+      "rs_port" : "com6",
+      "speed" : 9600,
+      "stopbits" : 1,
+      "parity" : "N",
+      "bytesize" : 8,
+      "timeout" : 3}
+  }
+}
+
+
+
+
+
+
+
+
+
+
