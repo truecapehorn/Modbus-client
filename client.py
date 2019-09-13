@@ -37,12 +37,12 @@ client = Master(modbus.client)
 
 print(modbus.host,modbus.port)
 
-reg_for_check = [30201, 30233, 30531, 30775, 30795, 30803, 30805, 30813, 30837, 30839, 30769, 30771, 30773,
-                 30957, 30959, 30961, 30537, 30953, 40212, 40915]
+# reg_for_check = [30201, 30233, 30531, 30775, 30795, 30803, 30805, 30813, 30837, 30839, 30769, 30771, 30773,
+#                  30957, 30959, 30961, 30537, 30953, 40212, 40915]
 
-# reg_for_check = [i for i in range(1000, 1016)]
+reg_for_check = [i for i in range(1000, 1016)]
 nr = 1
-reg32 = Odczyt(client, unit=3, reg_start=0, reg_lenght=2, data_type='int32',transp=True)
+reg32 = Odczyt(client, unit=3, reg_start=0, reg_lenght=1, data_type='int',transp=True)
 
 try:
     while True:
