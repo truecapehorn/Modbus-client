@@ -1,4 +1,4 @@
-from client import Klient,Rejestry,Cewki
+from client import Klient, Rejestry, Cewki
 import time
 
 modbus = Klient('config.json', 'tcp')
@@ -13,16 +13,21 @@ bol = Cewki(client, unit=1, reg_start=0, reg_lenght=250)
 
 reg_for_check = [i for i in range(1000, 1016)]
 nr = 1
+
+
+def print_data(time, data):
+    return print("{} : {}".format(time, data), end=';\n')
+
+
 try:
     while True:
-        print(nr, end=':\t ')
         # reg.set_reg_adress(0)
-        reg.set_lenght_data(nr)
-        bol.set_lenght_data(nr)
+        # reg.set_lenght_data(nr)
+        # bol.set_lenght_data(nr)
         holding = reg.read_holding()
-        print(holding['Data'], end=';')
         col = bol.read_coil()
-        print('\n\t', col['Data'])
+        print_data(holding['Time'][1], holding['Data'])
+        print_data(col['Time'][1], col['Data'])
         nr += 1
         time.sleep(1)
 except KeyboardInterrupt:
