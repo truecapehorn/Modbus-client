@@ -2,8 +2,8 @@
   "client":
   {
     "tcp": {
-      "host": "37.26.192.248",
-      "port": 502},
+      "host": "127.0.0.1",
+      "port": 5027},
     "rtu": {
       "method" : "rtu",
       "rs_port" : "com6",
