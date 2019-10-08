@@ -1,17 +1,18 @@
 {
-  "client":
-  {
+  "client": {
     "tcp": {
       "host": "127.0.0.1",
-      "port": 5027},
+      "port": 5027
+    },
     "rtu": {
-      "method" : "rtu",
-      "rs_port" : "com6",
-      "speed" : 9600,
-      "stopbits" : 1,
-      "parity" : "N",
-      "bytesize" : 8,
-      "timeout" : 3}
+      "method": "rtu",
+      "rs_port": "com3",
+      "speed": 9600,
+      "stopbits": 1,
+      "parity": "N",
+      "bytesize": 8,
+      "timeout": 3
+    }
   }
 }
 
