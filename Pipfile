@@ -9,6 +9,7 @@ verify_ssl = true
 pymodbus = "*"
 numpy = "*"
 pendulum = "*"
+twisted = "*"
 
 [requires]
 python_version = "3.7"
